@@ -39,16 +39,18 @@ function rcard(weather) {
     const cb = document.createElement('div');
     const ti = document.createElement('h5');
     const tw = document.createElement('p');
+    const ts = document.createElement('p');
     const he = document.createElement('p');
     
     card.setAttribute('id', 'forcast');
     card.append(cb);
-    cb.append(ti, tw, he);
+    cb.append(ti, tw, ts, he);
   
 
     ti.textContent = dayjs(weather.dt_txt).format('M/D/YYYY');
-    tw.textContent = "|  Tempature(f) " + t + "|  Wind Speed(mph)" + ws;
-    he.textContent = "|   Humidity(%)" + h;
+    tw.textContent = "  Tempature(f) " + t;
+    ts.textContent = "  Wind Speed(mph)" + ws;
+    he.textContent = "   Humidity(%)" + h;
   
     bb.append(card);
 }
@@ -59,7 +61,8 @@ function rforcast(weather) {
 
     const hd = document.createElement('div');
     const h = document.createElement('h3');
-    h.textContent = "Forecasts:";
+    hd.setAttribute('id', 'title2');
+    h.textContent = "Future Forecasts:";
     hd.append(h);
 
     bb.innerHTML = "";    
@@ -84,13 +87,15 @@ function rWeather(tn, weather) {
     const content = document.createElement('div');
     const title = document.createElement('h2');
     const tw = document.createElement('p');
+    const ts = document.createElement('p');
     const he = document.createElement('p');
 
     card.append(content);
-    title.textContent = tn + "   " + date ;
-    tw.textContent = "|  Tempature(f) " + t + "|  Wind Speed(mph)" + ws;
-    he.textContent = "|   Humidity(%)" + h;
-    content.append(title, tw, he);
+    title.textContent = tn + "'s   Current Weather: " + date ;
+    tw.textContent = "  Tempature(f) " + t;
+    ts.textContent = "  Wind Speed(mph)" + ws;
+    he.textContent = "   Humidity(%)" + h;
+    content.append(title, tw, ts, he);
 
     tp.innerHTML = '';
     tp.append(card);
