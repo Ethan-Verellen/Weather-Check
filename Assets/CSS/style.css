@@ -1,10 +1,13 @@
 header {
-width: 100%;
 text-align: center;
-background-color: rgb(23, 53, 218);
-color: white;
+background-color: #FFF1FA;
+}
+body {
+    
+background-color: #FFF1FA;
 }
 #left {
+    margin-right: 2%;
     float: left;
     width: 20%;
 }
@@ -19,16 +22,34 @@ margin-top: 3px;
 
 #history {
     width: 100%;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #top {
     justify-content: center;
     text-align: center;
+    background-color: #000080;
+    color: white;
+    width: 22%;
+    margin-left: 40%;
+    padding-bottom: 10px;
+  border-radius: 12px;
 }
 
 #forcast {
-    padding-bottom: 20px;
-    padding-left: 50%;
+    padding: 5px;
+    margin-left: 2%;
     text-align: center;
+    float: left;
+    font-size: 120%;
+    border-style: solid;
+    border-radius: 12px;
+    background-color: #000080;
+    color: white;
+}
+
+#title2 {
+    text-align: center;
+    padding-right: 20%;
+    font-size: larger;
 }
